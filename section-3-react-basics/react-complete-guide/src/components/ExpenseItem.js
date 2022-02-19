@@ -1,18 +1,18 @@
 import "./ExpenseItem.css";
 
-function ExpenseItem() {
-    const expenseDate = new Date(2021, 6, 31);
-    const expenseTitle = "Birthday Cake";
-    const expensePrice = 297.20;
+function ExpenseItem(props) {
+    // console.log(props)
+    // possible to edit vars in a diff var!
+    const expenseAmt = props.amount.toFixed(2);
 
     // brackets to tell js its one liner.
     return (
     <div className = "expense-item">
-        <div>{ expenseDate.toISOString() }</div>
+        <div>{ props.date.toISOString() }</div>
         <div className = "expense-item__description">
-            <h2>{ expenseTitle }</h2>
+            <h2>{ props.title }</h2>
         </div>
-        <div className = "expense-item__price">${ expensePrice.toFixed(2) }</div>
+        <div className = "expense-item__price">${ expenseAmt }</div>
     </div>
     );
 

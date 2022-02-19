@@ -45,3 +45,9 @@
 2. Currently, we hardcode the answer but we can make it slightly better by using variables in the component
 3. Use variables in components with `{}`
     - You can do js expressions inside it! eg. `expenseDate.toISOString()`, `expensePrice.toFixed(2)`.
+
+
+## 37. Passing Data via Props
+1. Reuse components by copy pasting the react elements into App.js
+2. Rn, the variables are baked into the component function. We can change that now!
+3. Components cant use data stored in other components directly. They need to be passed as props aka properties.
