@@ -51,3 +51,8 @@
 1. Reuse components by copy pasting the react elements into App.js
 2. Rn, the variables are baked into the component function. We can change that now!
 3. Components cant use data stored in other components directly. They need to be passed as props aka properties.
+
+## 38. Adding 'normal' js logic to components
+1. when transforming values using js functions, need to google more.
+    - W3schools shows all arguments!: https://www.w3schools.com/jsref/jsref_tolocalestring.asp
+2. try doing it your own way before seeing how he does it.
