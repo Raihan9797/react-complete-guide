@@ -60,3 +60,18 @@ You will need to create a `package.json` with this data:
 3. when extending, make sure to put `super()` in the constructor to access the super class properties and methods.
 
 # 5. Updated Classes
+
+# 6. Spread and Rest `...`
+1. Spread: split up array arguments or object properties
+- usually used to copy elements from old array to an new array with extra elements
+2. Rest: Used to merge a list of function arguments into an array
+- usually used in functions to take in all elements and change them to a list.
+
+# 7. Destructuring
+1. Slightly different from spread. Used to extract array elements and object properties and store them into variables.
+
+# Reference and Primitive Types
+1. Primitives (int string etc) are pass by value: ie values are copied
+2. Reference types (objects, arrays) are pass by reference ie the pointer is copied.
+    - take note, changing properties of one array will change the elements in the other referenced array!
+    - use `...` to basically copy the values into a new array!
