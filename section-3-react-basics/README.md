@@ -56,3 +56,22 @@
 1. when transforming values using js functions, need to google more.
     - W3schools shows all arguments!: https://www.w3schools.com/jsref/jsref_tolocalestring.asp
 2. try doing it your own way before seeing how he does it.
+
+## 39. Splitting components into multiple components
+1. no hard rule of whether to add or split components
+    - In this case the date component feels quite a lot so we make it a separate component!
+2. DON'T forget to export and import on both files
+3. For components with no content, both are valid.
+```js
+      <ExpenseItem 
+        title = {expenses[0].title} 
+        amount = {expenses[0].amount} 
+        date = {expenses[0].date}
+      />
+      <ExpenseItem 
+        title = {expenses[1].title} 
+        amount = {expenses[1].amount} 
+        date = {expenses[1].date}>
+      </ExpenseItem>
+```
+4. We are basically funneling props to each component! app.js -> expenseItem -> expenseDate!
