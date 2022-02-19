@@ -79,3 +79,4 @@ You will need to create a `package.json` with this data:
 # 9. Refreshing array functions:
 1. use docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 2. recall basic functions like `filter()`, `map()`, `reduce()` but there are many more.
+    - recall streams: they will usually return a new array (or element for reduce())
