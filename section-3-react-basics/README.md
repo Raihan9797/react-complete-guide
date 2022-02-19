@@ -27,6 +27,8 @@
 1. Look at which components you need to make.
 2. Best practice to put new components into new files. 1 file per component. So good idea to create a `components` folder
 3. We build a component tree starting from App.js!
+    - Only the topmost component ie App.js is rendered directly onto the page.
 4. Best practice to start with Caps and CamelCase eg. ExpenseItem.js
 5. **Component is basically function!**
 6. Custom components must start with Captial Letters!
+7. Components can only have one html element! So usually people will wrap chuncks into one div.
