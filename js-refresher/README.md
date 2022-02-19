@@ -52,6 +52,11 @@ You will need to create a `package.json` with this data:
   "author": "",
   "license": "ISC"
 }
-
-
 ```
+
+# 4. Classes
+1. remember constructors
+2. functions calling the properties: use `this.property`
+3. when extending, make sure to put `super()` in the constructor to access the super class properties and methods.
+
+# 5. Updated Classes
