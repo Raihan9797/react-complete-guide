@@ -18,3 +18,15 @@
 
 ## Index.js
 1. we import react dom. There are 2 different dependencies `react` and `react-dom` in `package.json` but these 2 from the react library. 
+2. More details in the files
+3. Whatever we do on react can be done using vanilla js and html. It would be imperative because you specify exactly what you want to do. This can get cumbersome.
+    - React is declarative: we just define the end state, react will settle how its shown.
+
+
+## 33. First custom component
+1. Look at which components you need to make.
+2. Best practice to put new components into new files. 1 file per component. So good idea to create a `components` folder
+3. We build a component tree starting from App.js!
+4. Best practice to start with Caps and CamelCase eg. ExpenseItem.js
+5. **Component is basically function!**
+6. Custom components must start with Captial Letters!

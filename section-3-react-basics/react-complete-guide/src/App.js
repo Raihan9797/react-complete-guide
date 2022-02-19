@@ -9,10 +9,14 @@ Inspect on Google Chrome / go to Sources / static. You will see .js files and th
 - That is basically the transformed code and also has all the React code there too!
 - This shows that react is way more developer friendly.
 */
+import ExpenseItem from "./components/ExpenseItem";
+
 function App() {
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <h2>Hello World!</h2>
+      <p>This is also visible</p>
+      <ExpenseItem></ExpenseItem>
     </div>
   );
 }
