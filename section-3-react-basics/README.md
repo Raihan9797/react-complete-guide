@@ -31,4 +31,11 @@
 4. Best practice to start with Caps and CamelCase eg. ExpenseItem.js
 5. **Component is basically function!**
 6. Custom components must start with Captial Letters!
-7. Components can only have one html element! So usually people will wrap chuncks into one div.
+
+## 34. More complicated JSX
+1. Components can only have one html element! So usually people will wrap chuncks into one div.
+2. Use "Format Document" to auto format in VSCode (though it didnt work for me).
+
+## 35. Adding Basic CSS styling
+1. We write `className` instead of `class` because class is already used by js.
+2. DON'T FORGET TO `import "./ExpenseItem.css";` !
