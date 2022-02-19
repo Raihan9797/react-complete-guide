@@ -1,3 +1,6 @@
+# Javascript refresher
+Basically, we will be writing React using the updated JS language. It's possible to use old versions i think, but let's keep it simple and follow one.
+
 # 1. let and const
 ES6 introduces `let` and `const`
 1. `let` is the new `var`.
