@@ -21,6 +21,7 @@ const myFnc = () => {
     ...
 }
 
+// concise version: 1 arg, 1 return line
 const multiply = number => number * 2;
 
 ```
@@ -29,3 +30,28 @@ const multiply = number => number * 2;
     - `this` will always keep the context in arrow functions
 3. if function uses EXACTLY ONE argument, then you can omit the `()`
 4. if function only has a return line. You can put it all in one line, remove the `{}` and `return`.
+
+# 3. Import export
+1. `default` exports means you can immediately export without specifying a name
+2. non default exports you have to explicitly call the name
+    - can alias them using `as`
+3. If you get this error:
+> SyntaxError: Cannot use import statement outside a module
+You will need to create a `package.json` with this data:
+```js
+{
+  "name": "esm",
+  "version": "1.0.0",
+  "description": "",
+  // name of the file importing everything!
+  "main": "main_file.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC"
+}
+
+
+```
