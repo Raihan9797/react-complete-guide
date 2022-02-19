@@ -39,3 +39,9 @@
 ## 35. Adding Basic CSS styling
 1. We write `className` instead of `class` because class is already used by js.
 2. DON'T FORGET TO `import "./ExpenseItem.css";` !
+
+## 36. Outputting Dynamic Data & Working with expressions in JSX
+1. As discussed previously, we want react to be coded once and reused everywhere.
+2. Currently, we hardcode the answer but we can make it slightly better by using variables in the component
+3. Use variables in components with `{}`
+    - You can do js expressions inside it! eg. `expenseDate.toISOString()`, `expensePrice.toFixed(2)`.
