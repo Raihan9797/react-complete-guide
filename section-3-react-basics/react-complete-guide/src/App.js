@@ -9,6 +9,10 @@ Inspect on Google Chrome / go to Sources / static. You will see .js files and th
 - That is basically the transformed code and also has all the React code there too!
 - This shows that react is way more developer friendly.
 */
+
+// in the past we used to import React. But using JSX, no longer needed.
+// however, you can uncomment this out to see that it works.
+// import React from 'react';
 import Expenses from "./components/Expenses";
 import Card from "./components/Card";
 
@@ -34,6 +38,17 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  // What happens when you use JSX
+  /*
+  return React.createElement(
+    Card,
+    {className: 'expenses'},
+    React.createElement('h2', {}, "Hello World!"),
+    React.createElement('p', {}, "This is also visible"),
+    React.createElement(Expenses, {expenses: expenses}),
+  );
+  */
 
   return (
     <Card className = 'expenses'>
