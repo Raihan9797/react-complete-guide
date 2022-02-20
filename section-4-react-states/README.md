@@ -65,3 +65,16 @@ function ExpenseItem(props) {
 2. These listeners by default take in the event being listened. So onChange() will also take in the events occuring at that point
     - particularly `event.target.value` will give us the inputted value
 3. Name it as `titleChangeHandler()`. Rmb only to point, not call onChange.
+
+## 54. Working with multiple states
+1. We need to store these inputs before we can submit all of them at once. For this, we use useState! 
+2. You can have multiple states ie useState() per component. They are also separate from each other.
+
+
+## 55. Using just one state (and what's better)
+1. Instead of 3 separate slices, you can group them together as an object!
+2. use spread `...userInput` to copy all the values, and then just update the keys!
+3. Both approaches are fine, but next lecture he'll cover the issues
+
+
+## 56. Updating state that depends on previous state.
