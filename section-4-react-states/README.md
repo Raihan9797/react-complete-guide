@@ -171,3 +171,7 @@ function NewExpense(props) {
 
 ## 60. Lifting components up
 1. Basically, lift as high as you need to.
+
+## Assignment 2: Expenses filter, passing from child to parent
+1. Managed to get the result needed, but unecessarily created a state in the child (expensesFilter) component.
+2. The answer also recommends 2 way binding from the parent and transferring that value down!

@@ -43,11 +43,11 @@ function ExpenseForm (props) {
     };
     function amountChangeHandler(event) {
         setEnteredAmount(event.target.value);
-        console.log(event.target.value);
+        // console.log(event.target.value);
     };
     function dateChangeHandler(event) {
         setEnteredDate(event.target.value);
-        console.log(event.target.value);
+        // console.log(event.target.value);
     };
 
     function submitHandler(event) {
