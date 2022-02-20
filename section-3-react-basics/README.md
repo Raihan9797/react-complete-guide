@@ -75,3 +75,8 @@
       </ExpenseItem>
 ```
 4. We are basically funneling props to each component! app.js -> expenseItem -> expenseDate!
+
+# Assignment: Create Expenses Component
+1. Done, but forgot to import css styles into `Expenses.js`.
+
+# 40. The Concept of Composition: children props
