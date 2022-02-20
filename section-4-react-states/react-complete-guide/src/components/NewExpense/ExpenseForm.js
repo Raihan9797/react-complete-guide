@@ -6,7 +6,7 @@ function ExpenseForm () {
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
 
-    // one state input
+    /* // one state input
     const [userInput, setUserInput] = useState(
         {
             enteredTitle: '',
@@ -14,10 +14,12 @@ function ExpenseForm () {
             enteredDate: ''
         }
     );
+    */
 
     function titleChangeHandler(event) {
         // this will store the input into the state and will survive regardless of how many times this function is called!
-        // setEnteredTitle(event.target.value);
+        setEnteredTitle(event.target.value);
+        console.log(event.target.value);
 
         // WRONG METHOD
         /*
@@ -38,7 +40,6 @@ function ExpenseForm () {
            }
        );
        */
-        console.log(event.target.value);
     };
     function amountChangeHandler(event) {
         setEnteredAmount(event.target.value);
@@ -48,7 +49,20 @@ function ExpenseForm () {
         setEnteredDate(event.target.value);
         console.log(event.target.value);
     };
-    return <form>
+
+    function submitHandler(event) {
+        event.preventDefault();
+
+        const expenseData = {
+            title: enteredTitle,
+            amount: enteredAmount,
+            date: new Date(enteredDate)
+        };
+
+        console.log(expenseData);
+    };
+
+    return <form onSubmit={submitHandler}>
         <div className = "new-expense__controls">
             <div className = "new-expense__control">
                 <label>Title</label>

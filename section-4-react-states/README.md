@@ -99,3 +99,24 @@ setUserInput(
 - We do this because React SCHEDULES state updates ie doesnt perform them instantly. If you have many state updates, you might be using an old version.
 - Calling a function inside `setUserInput()` will automatically update the state to the latest version.
 - **We will be using mutiple state methods moving forward.**
+
+
+## 57. Handling Form Submission
+1. onClick of a button is not the best method for form submission. There is default behavior for forms.
+    - If `button` of type `submit` is clicked in a `form`, the form element will emit and Event!
+    - so use `onSubmit` in the form element!
+2. By default, form submission will clear all the input and refresh the browser.
+    - it sends a request to the server
+    - since we need to manually combine this, we prevent this default behavior for now using `event.preventDefault();`. this is default js behavior!
+3. object property names can be anything. eg. title, amount, date
+```js
+function submitHandler(event) {
+    event.preventDefault();
+
+    const expenseData = {
+        title: enteredTitle,
+        amount: enteredAmount,
+        date: new Date(enteredDate)
+    };
+};
+```
