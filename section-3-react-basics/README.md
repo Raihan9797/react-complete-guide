@@ -84,3 +84,6 @@
 2. `props.className`: to get the styles used in the children components.
 3. The point of this is to minimize code duplication. Because we can extract html components and store it in a wrapper.
 4. You will not see these custom compoenents when inspecting. This is because they are just made up of the html components you built them on!
+
+# 42. (Optional) A closer look at JSX
+1. Last time need to `import React` but now with JSX, it automatically does that under the hood.
