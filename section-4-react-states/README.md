@@ -1,6 +1,6 @@
 # Section 4: React States & Working with Events
 
-## 46. Listening to Events and Working with Event Handlers
+## 47. Listening to Events and Working with Event Handlers
 1. Button element has native DOM events that we can listen to
     - search here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
     - click on "Dom interface". You will see that the HTMLButtonElement comes the Element.
@@ -10,3 +10,21 @@
     - This might be useful if you want to call something from the start!
 3. We can create the function in line or outside
 4. Naming convention of functions `xxxHandler` because you dont call it. And its attached to an event listener (onClick)
+
+## 48. How component functions are executed.
+1. `clickHandler` changes the var title. And when we check console.log(), it actually changes. BUT React has not rendered it again! Why?
+    - Your component is a function, to use it, we need to call it. The first call is done when we render
+    - It will call all component functions, then it will call any component functions() called by those functions until there are none left. eg
+    ```
+    1. index calls app
+    2. app calls expenses
+    3. expenses calls Card and ExpenseItem
+    4. Card done
+    5. ExpenseItem calls ExpenseDate
+    6. ExpenseDate done
+    7. Everything is now rendered.
+    ```
+2. How to tell React that something changed and needs to be reevaluated? Use States!
+
+## 49. Working with "State"
+1. Not a React specific concept
