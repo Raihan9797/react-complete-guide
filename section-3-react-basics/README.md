@@ -90,3 +90,4 @@
 
 # 43. Organizing Component Files
 1. Make sure the paths to each file are correct! eg. `../UI/Card` to go up 2 levels, then to UI folder then to Card file
+2. Organize such that everyone in your group understands.
