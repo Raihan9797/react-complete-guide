@@ -91,3 +91,16 @@
 # 43. Organizing Component Files
 1. Make sure the paths to each file are correct! eg. `../UI/Card` to go up 2 levels, then to UI folder then to Card file
 2. Organize such that everyone in your group understands.
+
+
+# 44. (Optional) Alternative Function Syntax
+```js
+function Expenses (prop) {
+    ...
+}
+
+const Expenses = () => {
+    ...
+}
+```
+1. basically the same
