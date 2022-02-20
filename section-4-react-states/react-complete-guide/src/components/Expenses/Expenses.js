@@ -30,8 +30,7 @@ const Expenses = (props) => {
             </ExpenseItem>
 
         </Card>
-
-    )
+    );
 }
 
 

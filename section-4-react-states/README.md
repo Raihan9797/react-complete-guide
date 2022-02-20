@@ -28,3 +28,24 @@
 
 ## 49. Working with "State"
 1. Not a React specific concept
+2. `import {useState} from "react"`
+3. must directly call INSIDE THE COMPONENT FUNCTION:
+```js
+function ExpenseItem(props) {
+    // useState returns a special variable and a function
+    // the function can change the variable
+    const [title, setTitle] = useState(props.title);
+    const expenseAmt = props.amount.toFixed(2);
+
+    function clickHandler() {
+        setTitle("New title has been set!");
+    }
+
+```
+4. useState returns a special variable and a function. the function is used change the variable which will tell React to call this component function again ie refresh the component!
+    - thats why we can use `const` because it doesnt change!
+    - this also means the title var wont change, since we didnt actually reassign that value!
+
+
+## 50. A closer look at the "useState" Hook.
+1. useState is for a specific component instance! This state is different for each components. Ie we have 4 ExpenseItems and they all have their own States! So when we change one, it wont change the others! PER COMPONENT INSTANCE BASIS!

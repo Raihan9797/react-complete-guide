@@ -1,4 +1,3 @@
-// import reactdom from reactdom
 import ReactDOM from 'react-dom';
 
 import './index.css';
