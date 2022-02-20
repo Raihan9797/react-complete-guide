@@ -50,10 +50,13 @@ function App() {
   );
   */
 
+  function addExpenseHandler(expense) {
+    console.log(expense);
+  };
   return (
     <div>
-      <NewExpense></NewExpense>
-      <Expenses expenses = {expenses}></Expenses>
+      <NewExpense onAddExpense = {addExpenseHandler}></NewExpense>
+      <Expenses expenses={expenses}></Expenses>
     </div>
   );
 }

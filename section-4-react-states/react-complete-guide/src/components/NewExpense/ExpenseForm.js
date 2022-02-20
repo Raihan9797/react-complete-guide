@@ -1,7 +1,7 @@
 import "./ExpenseForm.css";
 import {useState} from 'react';
 
-function ExpenseForm () {
+function ExpenseForm (props) {
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
@@ -59,10 +59,14 @@ function ExpenseForm () {
             date: new Date(enteredDate)
         };
 
+        // call the function VIA THE CLASSNAME! not the name of the function
+        props.onSaveExpenseData(expenseData);
+
         console.log(expenseData);
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
+
     };
 
     return <form onSubmit={submitHandler}>

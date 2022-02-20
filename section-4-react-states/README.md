@@ -138,3 +138,36 @@ function submitHandler(event) {
 
 ## 59. Child to Parent Component Communication
 1. How do we pass data from ExpenseForm to NewExpense to App so that we can create the ExpenseItem? ie go bottom up?
+- Basically, in the parent class, create an event listener `onAddExpense` and a function `addExpenseHandler` that takes in the data you need from the child.
+- In the child class, once you have the data to pass, call the function using the EventListener className ie `onAddExpense`!
+```js
+// app.js parent function
+  function addExpenseHandler(expense) {
+    console.log(expense);
+  };
+  return (
+    <div>
+      <NewExpense onAddExpense = {addExpenseHandler}></NewExpense>
+      <Expenses expenses={expenses}></Expenses>
+    </div>
+
+// new expense child component
+function NewExpense(props) {
+    function saveExpenseDataHandler(enteredExpenseData) {
+        const expenseData = {
+            ...enteredExpenseData,
+            id: Math.random()
+        };
+        // TRANSFER TO PARENT!
+        props.onAddExpense(expenseData);
+    };
+
+    return <div className = "new-expense">
+        <ExpenseForm onSaveExpenseData = {saveExpenseDataHandler}></ExpenseForm>
+    </div>
+};
+
+```
+
+## 60. Lifting components up
+1. Basically, lift as high as you need to.
