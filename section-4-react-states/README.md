@@ -120,3 +120,21 @@ function submitHandler(event) {
     };
 };
 ```
+
+## 58. Two way binding
+1. state gives us the ability to do two way binding (vs just using global variables.)
+    - we can not only listen to values, we can pass values back
+    - this will allow us to clear the input once a person submits the form!
+2. Use `value` and put the value back into the element
+```js
+<div className = "new-expense__control">
+    <label>Title</label>
+    <input type = "text" value = {enteredTitle} onChange = {titleChangeHandler}></input>
+</div>
+```
+3. **Remember that when chaning values, use `setxxx()` functions instead of reassigning values!
+- this is why `const` is useful!
+
+
+## 59. Child to Parent Component Communication
+1. How do we pass data from ExpenseForm to NewExpense to App so that we can create the ExpenseItem? ie go bottom up?
