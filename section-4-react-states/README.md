@@ -57,3 +57,11 @@ function ExpenseItem(props) {
 2. Makes use of html components `<form>` and `<input>`
     - recall the type, min, max, step
     - also submit button
+
+## 53. Listening to User Input
+1. For a start, we listen to EVERY change in user input
+    - user onChange() instead of onInput() because onChange() takes not just inputs but also choices like in dropdowns, radios etc.
+    - onInput() only reacts to every keystroke
+2. These listeners by default take in the event being listened. So onChange() will also take in the events occuring at that point
+    - particularly `event.target.value` will give us the inputted value
+3. Name it as `titleChangeHandler()`. Rmb only to point, not call onChange.
