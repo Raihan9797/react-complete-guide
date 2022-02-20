@@ -6,9 +6,38 @@ function ExpenseForm () {
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
 
+    // one state input
+    const [userInput, setUserInput] = useState(
+        {
+            enteredTitle: '',
+            enteredAmount: '',
+            enteredDate: ''
+        }
+    );
+
     function titleChangeHandler(event) {
         // this will store the input into the state and will survive regardless of how many times this function is called!
-        setEnteredTitle(event.target.value);
+        // setEnteredTitle(event.target.value);
+
+        // WRONG METHOD
+        /*
+        setUserInput({
+            ...userInput,
+            enteredTitle: event.target.value
+        });
+        */
+       // CORRECT ONE STATE METHOD
+       /*
+       setUserInput(
+           (prevState) => {
+               return {
+                   ...prevState,
+                   enteredTitle: event.target.value
+               };
+
+           }
+       );
+       */
         console.log(event.target.value);
     };
     function amountChangeHandler(event) {

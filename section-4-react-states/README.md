@@ -78,3 +78,24 @@ function ExpenseItem(props) {
 
 
 ## 56. Updating state that depends on previous state.
+1. **Whenever you update state and depend on previous state DO THIS:
+```js
+// WRONG METHOD
+/*
+setUserInput({
+    ...userInput,
+    enteredTitle: event.target.value
+});
+*/
+setUserInput(
+    (prevState) => {
+        return {
+            ...prevState,
+            enteredTitle: event.target.value
+        };
+    }
+);
+```
+- We do this because React SCHEDULES state updates ie doesnt perform them instantly. If you have many state updates, you might be using an old version.
+- Calling a function inside `setUserInput()` will automatically update the state to the latest version.
+- **We will be using mutiple state methods moving forward.**
