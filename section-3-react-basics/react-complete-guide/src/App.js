@@ -13,8 +13,7 @@ Inspect on Google Chrome / go to Sources / static. You will see .js files and th
 // in the past we used to import React. But using JSX, no longer needed.
 // however, you can uncomment this out to see that it works.
 // import React from 'react';
-import Expenses from "./components/Expenses";
-import Card from "./components/Card";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
   const expenses = [
@@ -51,11 +50,11 @@ function App() {
   */
 
   return (
-    <Card className = 'expenses'>
+    <div>
       <h2>Hello World!</h2>
       <p>This is also visible</p>
       <Expenses expenses = {expenses}></Expenses>
-    </Card>
+    </div>
   );
 }
 
