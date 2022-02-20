@@ -10,6 +10,7 @@ Inspect on Google Chrome / go to Sources / static. You will see .js files and th
 - This shows that react is way more developer friendly.
 */
 import Expenses from "./components/Expenses";
+import Card from "./components/Card";
 
 function App() {
   const expenses = [
@@ -35,11 +36,11 @@ function App() {
   ];
 
   return (
-    <div>
+    <Card className = 'expenses'>
       <h2>Hello World!</h2>
       <p>This is also visible</p>
       <Expenses expenses = {expenses}></Expenses>
-    </div>
+    </Card>
   );
 }
 

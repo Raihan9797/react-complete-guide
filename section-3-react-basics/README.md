@@ -80,3 +80,7 @@
 1. Done, but forgot to import css styles into `Expenses.js`.
 
 # 40. The Concept of Composition: children props
+1. `props.children`: get html componenets in a wrapper component.
+2. `props.className`: to get the styles used in the children components.
+3. The point of this is to minimize code duplication. Because we can extract html components and store it in a wrapper.
+4. You will not see these custom compoenents when inspecting. This is because they are just made up of the html components you built them on!
