@@ -14,6 +14,7 @@ Inspect on Google Chrome / go to Sources / static. You will see .js files and th
 // however, you can uncomment this out to see that it works.
 // import React from 'react';
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   const expenses = [
@@ -51,8 +52,7 @@ function App() {
 
   return (
     <div>
-      <h2>Hello World!</h2>
-      <p>This is also visible</p>
+      <NewExpense></NewExpense>
       <Expenses expenses = {expenses}></Expenses>
     </div>
   );

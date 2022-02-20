@@ -49,3 +49,11 @@ function ExpenseItem(props) {
 
 ## 50. A closer look at the "useState" Hook.
 1. useState is for a specific component instance! This state is different for each components. Ie we have 4 ExpenseItems and they all have their own States! So when we change one, it wont change the others! PER COMPONENT INSTANCE BASIS!
+
+## 51: State can be updated in many ways
+
+## 52. Adding form inputs
+1. Creating a NewExpense component which has ExpenseForm component
+2. Makes use of html components `<form>` and `<input>`
+    - recall the type, min, max, step
+    - also submit button
