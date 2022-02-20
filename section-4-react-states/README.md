@@ -175,3 +175,10 @@ function NewExpense(props) {
 ## Assignment 2: Expenses filter, passing from child to parent
 1. Managed to get the result needed, but unecessarily created a state in the child (expensesFilter) component.
 2. The answer also recommends 2 way binding from the parent and transferring that value down!
+
+## 61. Uncontrolled vs Controlled components, Stateless vs Stateful component:
+1. Controlled components eg. Expenses: both the value and changes to a value are not handled by a component itself, but by the parent (Expenses)
+2. Uncontrolled components eg. Expenses filter: it just helps with the visualizing, but doesnt really change any values.
+3. Stateless (presentational, dumb) components: no state
+4. Stateful (smart): with states.
+5. Most components will be stateless. A few will manage the state and pass the value to dumb components!
