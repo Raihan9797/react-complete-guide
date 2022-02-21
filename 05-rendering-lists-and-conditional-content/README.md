@@ -59,3 +59,9 @@ filteredExpenses.map((expense) => (
 3. If this is still too verbose in the JSX code. We can use a variable with a default value (eg. no content found) made of jsx content! Then we can check if there is data to render!
     - set a default content variable (`let expensesContent`)
     - check the data (`filteredExpenses`) to see if there is data to show. If there is assign `expensesContent` to the data. Otherwise do nth!
+
+
+## 68. Adding conditional return statements
+1. Restructure expenses component to remove the list
+2. If your entire JSX content (the `return(...)` part) changes, you can use `if(...) return(...)`. You couldnt do this in `Expenses.js` since the list was only a part of the component!
+3. Changing <div> to <ul> doesnt really work better. But semantically it is better.
