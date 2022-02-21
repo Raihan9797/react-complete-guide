@@ -19,7 +19,7 @@ function ExpenseForm (props) {
     function titleChangeHandler(event) {
         // this will store the input into the state and will survive regardless of how many times this function is called!
         setEnteredTitle(event.target.value);
-        console.log(event.target.value);
+        // console.log(event.target.value);
 
         // WRONG METHOD
         /*
@@ -62,7 +62,7 @@ function ExpenseForm (props) {
         // call the function VIA THE CLASSNAME! not the name of the function
         props.onSaveExpenseData(expenseData);
 
-        console.log(expenseData);
+        // console.log(expenseData);
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');

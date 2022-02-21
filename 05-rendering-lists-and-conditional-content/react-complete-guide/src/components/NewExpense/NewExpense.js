@@ -7,7 +7,7 @@ function NewExpense(props) {
             ...enteredExpenseData,
             id: Math.random()
         };
-        console.log(expenseData);
+        // console.log(expenseData);
         // transfer to app.js
         props.onAddExpense(expenseData);
     };
