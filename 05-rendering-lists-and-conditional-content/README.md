@@ -135,3 +135,22 @@ for (const property in object) {
 ```
 
 7. Currently, all css style files are NOT scoped they are actually global. we will settle this next section
+
+## Fixing small bug
+1. currently, the amount is a string and adding to it is just concatenating? To fix this, just
+```js
+// WRONG
+const expenseData = {
+  title: enteredTitle,
+  amount: enteredAmount,
+  date: new Date(enteredDate),
+};
+
+const expenseData = {
+  title: enteredTitle,
+  // CONVERT TO INT!
+  amount: +enteredAmount,
+  date: new Date(enteredDate),
+};
+
+```
