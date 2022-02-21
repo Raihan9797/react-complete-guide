@@ -18,3 +18,9 @@
     - `key` can be added to any component or even an HTML element. Adding this will help React identify individual items. In our case, we need unique keys for each item.
 4. We need to find a unique id to help react. Usually if we pull data from a database (which has unique values) this will be easy. We can use primitive values. In our case, we used the expense.id as the unique key which is based on Math.random().
     - He says you can do (expense, index) => {...} which auto has an index BUT, that index is not directly tied to the element and will thus still have bugs.
+
+
+## Assignment 3: Working with lists
+* Use the date selector to filter the expenses in the list.
+1. My solution was all inside the return() function. Was unsure of where exactly the expenses list would be affected if i used filter. So by doing it directly, I didnt have to worry about no changes.
+2. The instructor solution created a `const filteredExpenses` and did the same filter() i used. Then in the return function he used that variable instead of the `props.items`.
