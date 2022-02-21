@@ -82,3 +82,30 @@ filteredExpenses.map((expense) => (
     - **in `ExpenseForm.js` he just points to the function instead of creating a new function that calls the cancel button**. This is because the function is just to call the toggle. No extra function is needed.
     - cancel button uses `type = "button"`. dont think there is a cancel type.
     - **the add expense also doesnt call the hide function. In `Expense.js` he actually calls it inside the function itself.**
+
+
+## 69. Adding a chart (nice!)
+1. Create Chart and Chart bar components. Very abstract because we just discuss what we want and pretend like we have it eg. assuming the props will be an dict, has value label etc.
+
+## 70. Adding Dynamic styles
+1. Fleshing out Chart bar component. Remember that the bars should have a similar max height and that its filled relative to the max height. So how much we need to color the bar is DYNAMIC! How do we go about doing this?
+```js
+function ChartBar(props) {
+    let barFillHeight = "0%";
+
+    if (props.max > 0) {
+        barFillHeight = Math.round((props.value / props.maxValue) * 100) + "%";
+    }
+
+    // dynamic setting of height
+    return (<div className="chart-bar">
+        <div className="chart-bar__inner">
+            <div className="chart-bar__fill" style = {{height: barFillHeight}}></div>
+        </div>
+        <div className="chart-bar__label">{props.label}</div>
+
+    </div>)
+};
+```
+    - use the `style` keyword. It actually takes in an object basically to match the css object form.
+    - for properties with a dash eg. `background-color`, use `"background-color"` or `backgroundColor` to change the style properties!
