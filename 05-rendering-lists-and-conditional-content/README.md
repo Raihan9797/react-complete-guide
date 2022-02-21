@@ -72,5 +72,13 @@ filteredExpenses.map((expense) => (
     - First idea was to use a boolean toggle, `isHidden` as a state that we can switch.
     - I did a full conditional returns (2 returns based on the isHidden). Which may be why the error of no form occurs because it will not render the form at all if toggled as hidden.
     - 2 functions: showNewExpenseHandler() and hideNewExpenseHandler() that toggles the boolean.
-    - in `ExpenseForm.js` I create a cancel button that uses onClick to toggle. Need to point to the parent function using prop.
+    - in `ExpenseForm.js` I create a cancel button that uses onClick to toggle. Need to point to the parent function using prop. The button used `type = "cancel"`.
     - The add expense also calls the parent function once you submit the form.
+
+2. Instructors solution slightly different.
+    - Same boolean toggle
+    - However he used the same div and selected which to show depending on the boolean. Still has the same error
+    - same 2 functions to toggle the boolean
+    - **in `ExpenseForm.js` he just points to the function instead of creating a new function that calls the cancel button**. This is because the function is just to call the toggle. No extra function is needed.
+    - cancel button uses `type = "button"`. dont think there is a cancel type.
+    - **the add expense also doesnt call the hide function. In `Expense.js` he actually calls it inside the function itself.**

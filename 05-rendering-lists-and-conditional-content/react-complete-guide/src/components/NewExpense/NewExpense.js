@@ -11,6 +11,7 @@ function NewExpense(props) {
         // console.log(expenseData);
         // transfer to app.js
         props.onAddExpense(expenseData);
+        setIsHidden(true);
     };
 
     // initialize as hidden
@@ -19,29 +20,18 @@ function NewExpense(props) {
     // show when clicked
     function showNewExpenseHandler() {
         setIsHidden(false);
-        // console.log("clicked");
-        // setIsHidden(
-        //     (prevIsHidden) => {
-        //         console.log(prevIsHidden);
-        //         return false;
-        //     }
-        // );
     };
 
     function hideNewExpenseHandler() {
         console.log("hiding the new expense window");
         setIsHidden(true);
     }
-    if (isHidden) {
-        return (
-            <div className='new-expense'>
-                <button onClick={showNewExpenseHandler}>Show add new expense</button>
-            </div>
-        );
-    }
 
     return <div className = "new-expense">
-        <ExpenseForm onSaveExpenseData = {saveExpenseDataHandler} onHide = {hideNewExpenseHandler}></ExpenseForm>
+        {isHidden && 
+        <button onClick={showNewExpenseHandler}>Show add new expense</button>}
+        {!isHidden && 
+        <ExpenseForm onSaveExpenseData = {saveExpenseDataHandler} onHide = {hideNewExpenseHandler}></ExpenseForm>}
     </div>
 
 };

@@ -66,14 +66,14 @@ function ExpenseForm (props) {
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
-        props.onHide();
+        // props.onHide();
 
     };
 
-    function cancelButtonHandler(event) {
-        console.log("clicked cancel");
-        props.onHide();
-    }
+    // function cancelButtonHandler(event) {
+    //     console.log("clicked cancel");
+    //     props.onHide();
+    // }
 
     return <form onSubmit={submitHandler}>
         <div className = "new-expense__controls">
@@ -109,7 +109,7 @@ function ExpenseForm (props) {
             </div>
         </div>
         <div className = "new-expense__actions">
-            <button type = "cancel" onClick={cancelButtonHandler}>Cancel</button>
+            <button type = "cancel" onClick={props.onHide}>Cancel</button>
             <button type = "submit">Add Expense</button>
         </div>
 
