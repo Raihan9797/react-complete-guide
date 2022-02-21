@@ -109,3 +109,9 @@ function ChartBar(props) {
 ```
     - use the `style` keyword. It actually takes in an object basically to match the css object form.
     - for properties with a dash eg. `background-color`, use `"background-color"` or `backgroundColor` to change the style properties!
+
+## 71. Wrap up & Next Steps
+1. Create `ExpensesChart.js` which will basically return the Chart component
+    - need to define the datapoints that will be passed to the chart. so we create a const arr that contains objects (since each data point will have values like label and value). 
+    - the initial values of the arr will be 0. We used the filtered expense to display the chart (since we only want to display the relevant values). Use a for loop to go through all the expenses. For each month, add to its value!
+2. Make sure all prop names are correct (eg.dataPoints vs datapoints, val vs maxVal)
