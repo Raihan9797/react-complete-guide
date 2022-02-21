@@ -65,3 +65,12 @@ filteredExpenses.map((expense) => (
 1. Restructure expenses component to remove the list
 2. If your entire JSX content (the `return(...)` part) changes, you can use `if(...) return(...)`. You couldnt do this in `Expenses.js` since the list was only a part of the component!
 3. Changing <div> to <ul> doesnt really work better. But semantically it is better.
+
+## Assignment 4: Add new expense that can be toggled to hide
+1. My solution works, though it sometimes has a the error in console:
+> Form submission canceled because the form is not connected
+    - First idea was to use a boolean toggle, `isHidden` as a state that we can switch.
+    - I did a full conditional returns (2 returns based on the isHidden). Which may be why the error of no form occurs because it will not render the form at all if toggled as hidden.
+    - 2 functions: showNewExpenseHandler() and hideNewExpenseHandler() that toggles the boolean.
+    - in `ExpenseForm.js` I create a cancel button that uses onClick to toggle. Need to point to the parent function using prop.
+    - The add expense also calls the parent function once you submit the form.
