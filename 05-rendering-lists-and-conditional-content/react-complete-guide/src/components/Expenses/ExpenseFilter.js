@@ -12,7 +12,7 @@ function ExpenseFilter(props) {
     return (
         <div className="expenses-filter">
             <div className='expenses-filter__control'>
-                <label for = "years">Filter by year:</label>
+                <label htmlFor="years">Filter by year:</label>
                 <select 
                 name="Years" 
                 id="years" 
