@@ -115,3 +115,23 @@ function ChartBar(props) {
     - need to define the datapoints that will be passed to the chart. so we create a const arr that contains objects (since each data point will have values like label and value). 
     - the initial values of the arr will be 0. We used the filtered expense to display the chart (since we only want to display the relevant values). Use a for loop to go through all the expenses. For each month, add to its value!
 2. Make sure all prop names are correct (eg.dataPoints vs datapoints, val vs maxVal)
+3. Math.max(values). It does not take in an array so u need to spread `...` it.
+4. `getMonth()` starts from 0 == Jan.
+5. To loop through an array: use
+```js
+const array1 = ['a', 'b', 'c'];
+
+for (const element of array1) {
+  console.log(element);
+}
+```
+6. To loop through objects:
+```js
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+```
+
+7. Currently, all css style files are NOT scoped they are actually global. we will settle this next section
