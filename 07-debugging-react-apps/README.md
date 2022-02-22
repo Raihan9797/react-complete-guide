@@ -12,3 +12,9 @@ Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fr
 
 
 5. Typos will usually result in 'xxx' is not defined.
+
+
+## 85. Analyzing code flow and warnings
+1. If there are no compile errors but you see that its weird
+  - Follow the code logic: the deletions are weird so check that. deletehandler seems ok and it depends on checking the id. So go and check the id next. Youl see id is hardcoded. Can fix by setting using math.random(). not perfect but ez.
+  - check for warnings: you can see that when you add, it says there is the same keys!
