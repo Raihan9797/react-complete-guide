@@ -25,6 +25,6 @@ Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fr
   - we can basically edit code in the page itself.
 
 2. find your code on the side bar like this:
-![your file location](https://github.com/raihan9797/react-complete-guide/blob/07-debugging-react-apps/images/Capture.PNG)
+![your file location](https://github.com/Raihan9797/react-complete-guide/blob/07-debugging-react-apps/07-debugging-react-apps/images/Capture.PNG)
   - may also be in different subfolder so look around
   - add breakpoints by clicking on the line
