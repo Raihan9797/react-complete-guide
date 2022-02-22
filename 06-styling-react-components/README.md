@@ -54,3 +54,35 @@
 ## 79. Styled components and media queries. (skipped)
 
 ## 80. Using css modules
+1. Tbh, styled components is not needed. Its just that in big projects, people might name things the same which might result in wrong styles. If you prefer css files, you can use css modules instead.
+2. css modules is a feature that have been configured properly. Lucky for us `create-react-app` already configured.
+3. Change css filename:
+```
+Button.css -> Button.module.css
+```
+
+4. in the js file, import it like this and use it like this
+```js
+import React from 'react';
+
+import styles from './Button.module.css';
+
+// observe the className
+const Button = props => {
+  console.log(styles.button);
+  return (
+    <button type={props.type} className={styles.button} onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
+};
+
+export default Button;
+```
+
+    - The `styles` can be named as anything.
+    - Its an object that contains the css objects. we can just call the components we are using
+    - it can also call other css components using styles['form-control'] to allow for names with `-`
+
+5. Inspecting the element, you can see that `class = "Button_button__1B290"`. basically filename_componentname__uniquehash.
+    - css modules changes the classnames to be unique to prevent the same name being called!. This creates scoping!
