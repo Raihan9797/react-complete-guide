@@ -86,3 +86,32 @@ export default Button;
 
 5. Inspecting the element, you can see that `class = "Button_button__1B290"`. basically filename_componentname__uniquehash.
     - css modules changes the classnames to be unique to prevent the same name being called!. This creates scoping!
+
+
+## 81. Dynamic styles with css modules
+1. Lets change the `courseinput` to use css modules
+2. Now how do we make it dynamic? Use the backtick!
+```js
+  return (
+    <form onSubmit={formSubmitHandler}>
+      <div className={`${styles['form-control']} ${isValid ? "" : styles.invalid}`}>
+        <label >Course Goal</label>
+        <input type="text" onChange={goalInputChangeHandler} />
+      </div>
+      <Button type="submit" >Add Goal</Button>
+    </form>
+  );
+
+```
+
+
+3. To make it responsive, use media queries like regular css. Remember to add the selectors that you want to change inside!
+```css
+@media (min-width: 768px) {
+  .button {
+    width: auto;
+  }
+
+}
+
+```
