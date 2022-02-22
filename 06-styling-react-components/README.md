@@ -35,3 +35,22 @@
   );
 
 ```
+
+
+## 77. Introducing styled components (skipped)
+### This segment was skipped because there are 2 choices. Using this method is not my preference. Will be doing css modules instead.
+1. To prevent bad scoping: we can use 2 methods. Styled components is the first one
+2. install `npm install --save styled-components`
+3. We can now put the styles in the js files.
+    - remove selectors
+    - for pseudo selctors and dynamic selectors (eg. invalid) use `&`.
+4. Then we can change the style dynamically by just adding the style to the className. 
+5. We can also pass props to the style and then change the styles by checking the props.
+
+
+## 78. Styled components and dynamic props (skipped)
+
+
+## 79. Styled components and media queries. (skipped)
+
+## 80. Using css modules
