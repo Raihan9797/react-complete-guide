@@ -31,4 +31,5 @@ Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fr
 3. Set breakpoints by clicking on the line
   - use the blue buttons, to jump to the next function (the down button) or to just complete the function (the curved arrow)
   - you can hover over variables to see the values: you will see that "goal1" appears multiple times when deleting different goals which is not correct!
-![your file location](https://github.com/Raihan9797/react-complete-guide/blob/07-debugging-react-apps/07-debugging-react-apps/images/Capture.PNG)
+![your file location](https://github.com/Raihan9797/react-complete-guide/blob/07-debugging-react-apps/07-debugging-react-apps/images/breakpoints.PNG)
+
