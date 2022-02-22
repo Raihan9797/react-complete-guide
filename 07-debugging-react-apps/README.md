@@ -33,3 +33,13 @@ Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fr
   - you can hover over variables to see the values: you will see that "goal1" appears multiple times when deleting different goals which is not correct!
 ![your file location](https://github.com/Raihan9797/react-complete-guide/blob/07-debugging-react-apps/07-debugging-react-apps/images/breakpoints.PNG)
 
+
+## 87. Using react dev tools
+1. install "React Developer Tools" on chrome
+2. on the console you will see `profile` and `components` tab. We will use components for now.
+  - can see the component tree
+  - click on them to get more data eg props!
+3. we can se which components render these things
+  - the top most is the item which is directly rendered
+4. we can also see states in hooks! 
+  - can change them. If its 2 way binding, you will see the change on the app!
