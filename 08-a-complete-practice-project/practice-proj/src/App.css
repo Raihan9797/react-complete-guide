@@ -1,6 +1,6 @@
 .App {
   border: solid red;
-  background-color: green;
+  /* background-color: green; */
   display: flex;
   flex-direction: column;
   justify-content: center;
